@@ -5,8 +5,10 @@ import FilterCategory from "../filter-category";
 const Filter = () =>{
     return(
         <React.Fragment>
-            <h2>Filters</h2>
-            <FilterCategory/>
+            <div className="filterWrapper">
+                <h2>Filters</h2>
+                <FilterCategory/>
+            </div>
         </React.Fragment>
     );
 };

@@ -37,18 +37,26 @@ const App = () => {
   console.log(responseData);
   return (
       isLoading ? "Loading page" :
-      <React.Fragment>
-        <h1>SpaceX lunch Program</h1>
-        {hasError ? "Error" : ""}
-        <Filter/>
-        {
-          responseData.length && responseData.map((item, i) => 
-            // <p key={i}>{item.flight_number}</p>
-            <Card imgUrl={item.links.mission_patch_small !== undefined || null ? item.links.mission_patch : `No Image Found`} missionName={item.mission_name} flightNumber={item.flight_number} missionId={item.mission_id} yearLaunch={item.launch_year} successfulLaunch={item.launch_success} successfulLanding={item.rocket.first_stage.cores}/>
-          )
-        }
-        <footer>Developed By : {DeveloperName}</footer>
-        </React.Fragment>
+      <div className="greyBG">
+        <div className="container">
+          <h1 className="heading">SpaceX lunch Program</h1>
+        </div>
+        <div className="container">
+          {hasError ? "404" : ""}
+          <div className="d-flex">
+            <Filter/>
+            <div className="filterMainWrapper">
+            {
+              responseData.length && responseData.map((item, i) => 
+                <Card imgUrl={item.links.mission_patch_small !== undefined || null ? item.links.mission_patch : `No Image Found`} missionName={item.mission_name} flightNumber={item.flight_number} missionId={item.mission_id} yearLaunch={item.launch_year} successfulLaunch={item.launch_success} successfulLanding={item.rocket.first_stage.cores}/>
+              )
+            }
+            </div>
+          </div>
+          <footer>Developed By : {DeveloperName}</footer>
+        </div>
+      </div>
+        
   );
 }
 

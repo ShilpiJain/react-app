@@ -1,3 +1,12 @@
 .cardWrapper{
-    background-color: aliceblue;
+    width: 250px;
+    padding: 40px;
+    background-color: white;
+    margin-right: 30px;
+}
+.cardWrapper:nth-child(4){
+    margin: 0;
+}
+.cardWrapper img{
+    width: 100%;
 }
