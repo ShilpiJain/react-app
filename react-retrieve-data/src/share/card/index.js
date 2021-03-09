@@ -1,4 +1,5 @@
 import React from 'react';
+import H1 from '../h1/heading';
 import styles from "./styles.css";
 
 const Card = ({
@@ -12,6 +13,7 @@ const Card = ({
 }) =>{
     return(
         <div className="cardWrapper">
+            <H1 title={flightNumber}/>
             <img src={imgUrl} alt="ll"/>
             <div>{missionName} #{flightNumber}</div>
             <div>Mission ID: {missionId}</div>

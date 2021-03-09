@@ -7,7 +7,7 @@ const Filter = () =>{
         <React.Fragment>
             <div className="filterWrapper">
                 <h2>Filters</h2>
-                <FilterCategory/>
+                <FilterCategory title="color"/>
             </div>
         </React.Fragment>
     );

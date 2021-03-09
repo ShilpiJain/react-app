@@ -5,7 +5,7 @@ import Card from './share/card';
 import axios from 'axios';
 
 const App = () => {
-  const DeveloperName = "Shilpi Jain";
+  let DeveloperName = "Shilpi Jain";
   const [responseData, setResponseData] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsloading] = useState(false);
@@ -47,16 +47,13 @@ const App = () => {
             <Filter/>
             <div className="filterMainWrapper">
             {
-              responseData.length && responseData.map((item, i) => 
-                <Card imgUrl={item.links.mission_patch_small !== undefined || null ? item.links.mission_patch : `No Image Found`} missionName={item.mission_name} flightNumber={item.flight_number} missionId={item.mission_id} yearLaunch={item.launch_year} successfulLaunch={item.launch_success} successfulLanding={item.rocket.first_stage.cores}/>
-              )
+              responseData.length && responseData.map((item, i) => <Card key={i} imgUrl={item.links.mission_patch_small !== undefined || null ? item.links.mission_patch : `No Image Found`} missionName={item.mission_name} flightNumber={item.flight_number} missionId={item.mission_id} yearLaunch={item.launch_year} successfulLaunch={item.launch_success} successfulLanding={item.rocket.first_stage.cores}/>)
             }
             </div>
           </div>
           <footer>Developed By : {DeveloperName}</footer>
         </div>
       </div>
-        
   );
 }
 
