@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from "./styles.css";
 
-const TabLabel = () =>{
+const TabLabel = ({color}) =>{
+
     return(
         <React.Fragment>
-            <div className="filterLabel">2016</div>
+            {
+                color && color.map ((item, index) => <div className="filterLabel" key={index}>{item}</div>)
+                
+            }
         </React.Fragment>
     );
 };
