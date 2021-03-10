@@ -13,7 +13,7 @@ const Card = ({
 }) =>{
     return(
         <div className="cardWrapper">
-            <H1 title={flightNumber}/>
+            <H1 >dfsdf</H1>
             <img src={imgUrl} alt="ll"/>
             <div>{missionName} #{flightNumber}</div>
             <div>Mission ID: {missionId}</div>

@@ -14,7 +14,8 @@ const App = () => {
     setIsloading(true);
     axios({
       "method": "GET",
-      "url": "https://api.spacexdata.com/v3/launches",
+      // "url": "https://api.spacexdata.com/v3/launches",
+      "url": "http://localhost:8000/mockapi.json",
       headers: {
         "Content-Type": "application/json"
     }
